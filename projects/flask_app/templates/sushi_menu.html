@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sushi Menu</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/sushi_menu.css') }}">
+</head>
+<body>
+    <h1 id="title">Sushi Menu</h1>
+    <ul id="sushis">
+        {% for sushi in sushis %}
+        <li onClick="handle_clicked('Sushi: {{ sushi.type }} - Price: ${{ sushi.price }}')">
+            <img src="{{ url_for('static', filename='images/' + sushi.image) }}" alt="{{ sushi.type }}">
+            <h3>{{ sushi.type }}</h3>
+            <h3>${{ sushi.price }}</h3>
+        </li>
+        {% endfor %}
+    </ul>
+    <form id="order_form" action="{{ url_for('order_request') }}" method="POST">
+        <h2>Order Summary</h2>
+        <textarea name="order_summary" id="order_summary" rows="10" cols="35"></textarea>
+        <div id="customer_info">
+            <label for="customer_name">Customer Name: </label>
+            <input type="text" id="customer_name" name="customer_name">
+        </div>
+        <input type="submit" id="place_order" value="Place Order">
+    </form>
+    <script>
+        function handle_clicked(order) {
+            let order_summary = document.getElementById("order_summary");
+            order_summary.value += order + "\n";
+        }
+    </script>
+</body>
+</html>
+
+

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main_menu.css') }}">
+    <title>Main Menu</title>
+</head>
+<body>
+    <h1 id="title">Atarashy Main Menu</h1>
+    <ul id="main_plates">
+        {% for plate in main_plates %}
+        <li>
+            <a href="{{ plate.url }}">
+                <img width="10%" src="{{ url_for('static', filename='images/' + plate.image) }}" alt="{{ plate.type }}">
+                <h2>{{ plate.type }}</h2>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+    <h1><a href="{{ sushis }}">Click here for sushi Menu</a></h1>
+</body>
+</html>
+
+

@@ -1,0 +1,121 @@
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Title styling */
+#title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Sushis container styling */
+#sushis {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Individual sushi styling */
+#sushis li {
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    width: 200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for sushis */
+#sushis li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Image styling */
+#sushis img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Sushi type and price styling */
+#sushis h3 {
+    font-size: 1.2em;
+    margin: 5px 0;
+    color: #333;
+}
+
+/* Form styling */
+#order_form {
+    margin-top: 30px;
+    text-align: left;
+    display: inline-block;
+}
+
+/* Form title styling */
+#order_form h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Textarea styling */
+#order_summary {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Customer info styling */
+#customer_info {
+    margin-top: 10px;
+}
+
+/* Label styling */
+#customer_info label {
+    font-size: 1em;
+    margin-right: 10px;
+}
+
+/* Input styling */
+#customer_info input[type="text"] {
+    padding: 5px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+    box-sizing: border-box;
+}
+
+/* Submit button styling */
+#place_order {
+    display: block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Submit button hover effect */
+#place_order:hover {
+    background-color: #45a049;
+}
